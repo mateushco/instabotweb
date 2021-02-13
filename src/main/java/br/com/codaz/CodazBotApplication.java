@@ -23,10 +23,13 @@ public class CodazBotApplication extends SpringBootServletInitializer{
 		Timer timer = new Timer(); 
 		timer.scheduleAtFixedRate(new TimerTask() {
 		    @Override public void run() { 
-		    	Email.teste();
+		    	
 		    	try {
+		    		Email.email("neovitalle");
 					Execute.conectarSeguir("neovitalle", "neovitallesaude17", "conhecaunai", 50, 15);
+					Email.email("dra.solangebanoski");
 					Execute.conectarSeguir("dra.solangebanoski", "sol260879", "conhecaunai", 50, 15);
+					
 				} catch (InstagramException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
